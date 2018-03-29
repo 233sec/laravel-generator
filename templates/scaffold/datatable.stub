@@ -8,6 +8,10 @@ use Yajra\Datatables\Services\DataTable;
 
 class $MODEL_NAME$DataTable extends DataTable
 {
+    /**
+     * @var string 标题
+     */
+    static $title = '$MODEL_NAME_PLURAL_CAMEL$';
 
     /**
      * @return \Illuminate\Http\JsonResponse
@@ -83,6 +87,6 @@ class $MODEL_NAME$DataTable extends DataTable
      */
     protected function filename()
     {
-        return '$MODEL_NAME_PLURAL_CAMEL$';
+        return self::$title;
     }
 }
